@@ -3,26 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SmartAlpha • Legal</title>
-  <meta name="description" content="SmartAlpha Legal: Terms of Use and Privacy Policy">
+  <title>SmartAlpha • App Legal &amp; Support</title>
+  <meta name="description" content="Legal and support pages for apps published by SmartAlpha">
   <style>
     body {font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Noto Color Emoji,sans-serif; margin:0; padding:40px; line-height:1.6;}
     .wrap {max-width:860px; margin:0 auto;}
-    a.button {display:inline-block; padding:12px 18px; border:1px solid #ddd; border-radius:10px; text-decoration:none; margin-right:12px;}
+    .apps {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:28px 0;}
+    .app {padding:22px;border:1px solid #ddd;border-radius:18px;background:#fff;}
+    a.button {display:inline-block; padding:10px 15px; border:1px solid #ddd; border-radius:10px; text-decoration:none; margin:5px 8px 5px 0;}
   </style>
 </head> 
 <body>
   <div class="wrap">
-    <h1>SmartAlpha • Legal</h1>
-    <p>Find our legal documents below.</p>
-    <p>
-      <a class="button" href="./privacy/">Privacy Policy</a>
-      <a class="button" href="./terms/">Terms of Use</a>
-    </p>
+    <h1>SmartAlpha • App Legal &amp; Support</h1>
+    <p>Select an app to find its privacy, terms, and support information.</p>
+    <div class="apps">
+      <section class="app">
+        <h2>LumiPet</h2>
+        <p>A gentle AI pet companion.</p>
+        <a class="button" href="./lumipet/">LumiPet Legal &amp; Support</a>
+      </section>
+      <section class="app">
+        <h2>SmartAlpha</h2>
+        <p>Market insights and analytical tools.</p>
+        <a class="button" href="./privacy/">Privacy Policy</a>
+        <a class="button" href="./terms/">Terms of Use</a>
+      </section>
+    </div>
     <hr />
-    <p style="color:#555">© <span id="y"></span> SMARTALPHA OWNER NAME. All rights reserved.</p>
+    <p style="color:#555">© <span id="y"></span> SmartAlpha. All rights reserved.</p>
   </div>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
