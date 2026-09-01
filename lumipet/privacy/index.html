@@ -30,7 +30,7 @@
       <p>Raw chat history is not kept as a permanent conversation archive. If you enable long-term memory, only eligible memory summaries are selected. You can turn memory off and view, edit, delete, export, or clear memories in the app.</p>
 
       <h2>2. Optional cloud processing</h2>
-      <p>When you choose a cloud-powered response, LumiPet may send your current message, a limited amount of recent conversation context, pet persona values, and up to three authorized safe memory summaries to the LumiPet service. Long-term memory is not sent when its setting is off. Blocked, sensitive, deleted, or superseded memories are not included.</p>
+      <p>You choose how Talk replies are generated. In Best available mode, LumiPet tries secure cloud AI first and may send your current message, the separate session opening, up to six complete recent safe turns, pet persona values, a limited user summary, and up to three semantically relevant safe memory summaries that you authorized. In Private on device mode, Talk messages and memories are never sent to cloud AI. Long-term memory is not sent when its setting is off. Blocked, sensitive, deleted, or superseded memories are not included.</p>
       <p>The LumiPet service sends the minimum content needed to OpenAI to generate and safety-check a reply. Requests use provider controls intended not to create persistent conversation objects, but provider security and abuse-monitoring retention may still apply under the provider’s current policies and the production account configuration. On-device and honest offline fallback modes remain available when cloud service is unavailable.</p>
 
       <h2>3. Anonymous account, security, and usage information</h2>
@@ -48,8 +48,8 @@
       <p>Deleting a LumiPet account does not cancel an Apple auto-renewable subscription. Manage or cancel subscriptions through Apple’s subscription settings.</p>
 
       <h2>5. Weather and location</h2>
-      <p>Weather is optional and is requested only after you choose to enable it. LumiPet requests approximate When In Use location and tries Apple WeatherKit first. If Apple Weather is unavailable, LumiPet rounds the one-time coordinate to two decimal places (about 1.1 km at the equator) and sends it through the authenticated LumiPet service to Google Weather for current conditions.</p>
-      <p>The fallback coordinate can be linked to your anonymous LumiPet account while the request is serviced, but LumiPet does not store it in the app database, cloud database, logs, analytics, notifications, memories, or AI requests. Google may process the request under its own service and privacy terms. A normalized weather condition, temperature band, day phase, timestamp, stale-state indicator, and provider attribution may be cached locally. Care, growth, Talk, and offline features remain available if location or weather access is denied.</p>
+      <p>Weather is optional and is requested only after you choose to enable it. LumiPet requests When In Use location, rounds the one-time coordinate to two decimal places (about 1.1 km at the equator), and sends only that approximate coordinate through the authenticated LumiPet service to Google Weather for current conditions. If Google Weather is unavailable, LumiPet immediately tries Apple WeatherKit directly.</p>
+      <p>The approximate coordinate can be linked to your anonymous LumiPet account only while the request is serviced, but LumiPet does not store it in the app database, cloud database, logs, analytics, notifications, memories, or AI requests. Google and Apple may process their respective weather requests under their own service and privacy terms. A normalized weather condition, temperature band, day phase, timestamp, stale-state indicator, and actual provider attribution may be cached locally for up to 24 hours. Care, growth, Talk, and offline features remain available if location or both weather providers are unavailable.</p>
 
       <h2>6. Local notifications</h2>
       <p>Pet reminders are local iOS notifications and are off until you enable them. Preferences and notification history stay on your device. Notification text uses predefined, localized templates and does not include chat text, memories, health information, exact location, credentials, or purchase data. LumiPet does not use notification badges to create pressure.</p>
@@ -64,7 +64,7 @@
       </ul>
 
       <h2>8. Service providers and disclosure</h2>
-      <p>Depending on the features you choose, information may be processed by Apple services such as StoreKit, WeatherKit, App Attest, and App Store Server APIs; Google Weather as a fallback for current conditions; OpenAI for optional cloud AI; and infrastructure providers used to host the LumiPet API and database. These providers process information under their own terms and privacy commitments.</p>
+      <p>Depending on the features you choose, information may be processed by Apple services such as StoreKit, WeatherKit, App Attest, and App Store Server APIs; Google Weather as the primary current-conditions provider; OpenAI for Best available cloud AI; and Google Cloud infrastructure used to host the LumiPet API and database. These providers process information under their own terms and privacy commitments.</p>
       <p>We do not sell or rent personal information and do not use it for cross-app advertising. We may disclose information when required by law or when reasonably necessary to protect users, the service, or legal rights.</p>
 
       <h2>9. Retention and deletion</h2>
